@@ -20,6 +20,7 @@ export class FooterComponent {
   faChevronUp = faChevronUp;
 
   constructor(private viewportScroller: ViewportScroller) {}
+  public onClick(elementId: string): void { this.viewportScroller.scrollToAnchor(elementId); }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     // Show the button when scrolled down a certain amount

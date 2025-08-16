@@ -48,6 +48,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     display: block;
     font-weight: 600;
     padding: 25px 25px;
+    cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -103,4 +104,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         margin: 5px 0;
         padding: 15px 15px !important;
     }
+}
+
+a.nav-item.pe-3.nav-link:hover {
+    color: #333333 !important;
 }
