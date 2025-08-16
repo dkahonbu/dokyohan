@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { faFacebookF, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faAlignLeft, faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faUsersViewfinder, faEnvelope, faCalendar, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 declare var WOW: any;
 declare var spinner: any;
@@ -18,6 +18,9 @@ export class HomeComponent implements AfterViewInit {
   faLinkedin = faLinkedin;
   faInstagram = faInstagram;
   faUsersViewfinder = faUsersViewfinder;
+  faEnvelope = faEnvelope;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faCalendar = faCalendar;
 
   ngAfterViewInit(): void {
     new WOW().init();

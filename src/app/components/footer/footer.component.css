@@ -1,0 +1,98 @@
+.footer-about .bg-primary {
+    background-color: var(--white-yellow) !important;
+    color: #000;
+    font-weight: 200;
+    font-size: 12px;
+    -webkit-filter: drop-shadow(1px 1px 1px #a0a7b1);
+}
+
+.col-lg-4.col-md-6.footer-about {
+    margin-bottom: -50px;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+}
+
+.navbar-brand img.img-fluid.img-logo {
+    width: 160px;
+    -webkit-filter: drop-shadow(1px 1px 1px #000);
+}
+
+.footer-about .bg-primary p.mt-4 {
+    font-weight: 400;
+}
+
+.d-flex.align-items-center.justify-content-center.copyrights p {
+    font-size: 13px;
+}
+.d-flex.align-items-center.justify-content-center.copyrights p a.text-white {
+    text-decoration: none;
+}
+
+.row.gx-5.footer-section-column .section-title h5 {
+    font-size: 18px !important;
+    text-shadow: 0 0.125rem 0.25rem #4d4848;
+}
+
+.section-title.section-title-sm::before {
+    background: var(--white-yellow);
+    width: 90px;
+    height: 3px;
+}
+
+.section-title.section-title-sm::after {
+    background: var(--red);
+    width: 6px;
+    height: 3px;
+}
+
+.section-title.section-title-sm::after {
+    -webkit-animation: section-title-run-sm 5s infinite linear;
+    animation: section-title-run-sm 5s infinite linear;
+}
+@-webkit-keyframes section-title-run-sm {
+    0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
+}
+
+.social-m a.btn.btn-white-yellow.text-red.btn-square {
+    box-shadow: inset 2px 2px 2px #75051f, inset -3px -3px 3px #75051f !important;
+    border-color: rgb(176 10 49) !important;
+}
+
+.social-m a.btn.btn-white-yellow.text-red.btn-square:hover fa-icon.ng-fa-icon {
+    color: #616455 !important;
+}
+.link-animated a.text-light:hover {
+    color: #f9f3d8 !important;
+}
+
+.link-animated i.bi.me-2,.footer-section-column i.bi.me-2 {
+    color: #f5f0d7 !important;
+}
+
+.link-animated a.text-light {
+    text-decoration: none;
+    font-weight:500;
+}
+.footer-section-column p {
+    font-weight: 500;
+}
+
+button.scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fffcef !important;
+    -webkit-filter: drop-shadow(2px 2px 2px #000);
+    border: NONE !important;
+    border-radius: .3rem;
+    padding: .4rem .7rem;
+}
+
+@media (max-width: 767.98px) {
+    .col-lg-4.col-md-6.footer-about {
+        margin-bottom: 0;
+        padding: 0 !important;
+    }
+}

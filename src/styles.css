@@ -10,6 +10,9 @@
 .red-drop-shadow {
     -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
 }
+.shadow-icon {
+    -webkit-filter: drop-shadow(1px 1px 1px #bdb8b8);
+}
 .btn-bg-red {
     color: #ffffff;
     background-color: var(--red) !important;

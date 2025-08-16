@@ -50,13 +50,13 @@
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 me-3" src="assets/img/icon-schedule.png" alt="">
+                                    <img class="flex-shrink-0 me-3 shadow-icon" src="assets/img/icon-schedule.png" alt="">
                                     <h5 class="mb-0">Flexible Schedules</h5>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 me-3" src="assets/img/icon-cash.png" alt="">
+                                    <img class="flex-shrink-0 me-3 shadow-icon" src="assets/img/icon-cash.png" alt="">
                                     <h5 class="mb-0">First Class FREE</h5>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                             <h5 class="fw-bold text-primary text-uppercase text-red">Our Team</h5>
                             <h2 class="mb-0 fw-bold">Meet Our Experienced Instructors</h2>
                         </div>
-                    <p class="mb-4 color-brown">Our black-belt instructors are certified in traditional Shotokan, Goju‑Ryu, or modern self‑defense systems. They’re passionate, approachable, and committed to continuous professional development through seminars and gradings.</p>
+                    <p class="mb-4 text-brown fw-medium">Our black-belt instructors are certified in traditional Shotokan, Goju‑Ryu, or modern self‑defense systems. They’re passionate, approachable, and committed to continuous professional development through seminars and gradings.</p>
                     <a type="button" class="btn btn-bg-red animated slideInLeft" href="#"><fa-icon [icon]="faUsersViewfinder"></fa-icon> VIEW MORE</a>
                 </div>
                 <div class="col-lg-7">
@@ -184,4 +184,136 @@
     </div>
 </div>
 <!-- contact-->
-
+ <div id="contact" style="scroll-margin-top:3rem">
+    <div class="container-fluid contact py-5 ">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                    <h1 class="display-6 text-white mb-5">Feel Free to Contact us</h1>
+                    <p class="text-white mb-5">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna.</p>
+                    <div class="bg-white rounded p-3 w-75">
+                        <div class="d-flex align-items-center btn-bg-red rounded p-3">
+                            <img class="flex-shrink-0 rounded-circle me-3" src="assets/img/logo-small.png" alt="">
+                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+                    <div class="bg-white rounded p-5 form-shadow">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-sm-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="gname" placeholder="Gurdian Name">
+                                        <label for="gname">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="gmail" placeholder="Gurdian Email">
+                                        <label for="gmail">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="cname" placeholder="Child Name">
+                                        <label for="cname">Your Mobile</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-danger py-3 px-5 shadow-icon" type="submit"><fa-icon [icon]="faEnvelope"></fa-icon> Send Email</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- events-->
+<div id="events" style="scroll-margin-top:3rem">
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase text-red">Events & Updates</h5>
+                <h2 class="mb-0 fw-bold">Read the Latest Events</h2>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="event-item bg-light rounded overflow-hidden">
+                        <div class="event-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="assets/img/2025-belting.jpg" alt="">
+                            <!-- <p class="position-absolute top-0 start-0 bg-red red-drop-shadow text-white rounded-end mt-5 py-2 px-4">Upcoming</p> -->
+                        </div>
+                        <div class="p-4">
+                            <div class="events-top">
+                                <div class="d-flex mb-1">
+                                    <small><fa-icon class="text-red me-2"  [icon]="faCalendar"></fa-icon>August 10, 2025</small>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small><fa-icon class="text-red me-2"  [icon]="faMapMarkerAlt"></fa-icon>SM Consolacion Cebu / VillaGenia Events Center</small>
+                                </div>
+                            </div>
+                            <div class="events-bottom">
+                                <p>2025 Belting Ceremony</p>
+                                <a type="button" class="btn btn-bg-red animated slideInLeft" href="#"><fa-icon [icon]="faUsersViewfinder"></fa-icon> VIEW MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="event-item bg-light rounded overflow-hidden">
+                        <div class="event-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="assets/img/alegado-cup.jpg" alt="">
+                            <!-- <a class="position-absolute top-0 start-0 bg-red red-drop-shadow text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a> -->
+                        </div>
+                        <div class="p-4">
+                            <div class="events-top">
+                                <div class="d-flex mb-1">
+                                    <small><fa-icon class="text-red me-2"  [icon]="faCalendar"></fa-icon>October 12 - 13, 2024</small>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small><fa-icon class="text-red me-2"  [icon]="faMapMarkerAlt"></fa-icon>SM Consolacion Cebu</small>
+                                </div>
+                            </div>
+                            <div class="events-bottom">
+                                <p>3rd Hon. Mayor Teresa Alegado Cup Open Invitational Karatedo Championship</p>
+                                <a type="button" class="btn btn-bg-red animated slideInLeft" href="#"><fa-icon [icon]="faUsersViewfinder"></fa-icon> VIEW MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="event-item bg-light rounded overflow-hidden">
+                        <div class="event-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="assets/img/alegado-cup.jpg" alt="">
+                            <p class="position-absolute top-0 start-0 bg-red red-drop-shadow text-white rounded-end mt-5 py-2 px-4">Upcoming</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="events-top">
+                                <div class="d-flex mb-1">
+                                    <small><fa-icon class="text-red me-2"  [icon]="faCalendar"></fa-icon>October 12 - 13, 2024</small>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small><fa-icon class="text-red me-2"  [icon]="faMapMarkerAlt"></fa-icon>SM Consolacion Cebu</small>
+                                </div>
+                            </div>
+                            <div class="events-bottom">
+                                <p>3rd Hon. Mayor Teresa Alegado Cup Open Invitational Karatedo Championship</p>
+                                <a type="button" class="btn btn-bg-red animated slideInLeft" href="#"><fa-icon [icon]="faUsersViewfinder"></fa-icon> VIEW MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

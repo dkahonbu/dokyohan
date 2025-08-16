@@ -37,6 +37,9 @@
     position: relative;
 }
 @media (max-width: 991.98px) {
+    .bg-white.rounded.p-3.w-75 {
+        width: 100% !important;
+    }
     .banner .container.mb-5.position-relative.overflow-hidden {
         margin-bottom: 1rem !important;
     }
@@ -202,3 +205,47 @@ div#teams .btn-bg-red.slideInLeft:hover {
     -webkit-filter: drop-shadow(2px 2px 1px #000);
 }
 /* contact */
+.contact {
+    background: linear-gradient(rgb(226 0 43 / 19%), rgb(226 0 43 / 11%)), url(/assets/img/bannerhead.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.container-fluid.contact.py-5 .btn-bg-red {
+    -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
+}
+
+.container-fluid.contact.py-5 .btn-bg-red img {
+    -webkit-filter: drop-shadow(1px 1px 1px #000);
+}
+
+.form-shadow {
+    box-shadow: 4px 4px 4px #8b6969, -5px -5px 5px #865656 !important;
+}
+/* events */
+.event-item.bg-light.rounded.overflow-hidden {
+    background-color: var(--white-yellow) !important;
+    -webkit-filter: drop-shadow(2px 2px 2px #9198a3);
+}
+
+div#events p {
+    font-weight: 500;
+    color: #000000;
+}
+
+div#events small {
+    font-weight: 500;
+    font-size: .840em;
+    color: #333333;
+}
+
+div#events .p-4 {
+    min-height: 233.65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div#events .p-4 .events-bottom a.btn.btn-bg-red.slideInLeft {
+    font-size: 12px;
+    -webkit-filter: drop-shadow(1px 1px 1px #626164);
+}
