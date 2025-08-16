@@ -16,6 +16,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FontAwesomeModule
     
   ],
   providers: [

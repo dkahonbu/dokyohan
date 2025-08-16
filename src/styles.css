@@ -1,1 +1,163 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --gray: #ecf0f6;
+    --light-blue: #f4f7fe;
+    --white-yellow: #fffcef;
+    --red: #b00a31;
+    --brown: #616455;
+}
+/* You can add global styles to this file, and also import other style files */
+.red-drop-shadow {
+    -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
+}
+.btn-bg-red {
+    color: #ffffff;
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
+}
+.btn-white-yellow {
+    color: #000;
+    background-color: var(--white-yellow) !important;
+    border-color: var(--white-yellow) !important;
+}
+.bg-red {
+    background-color: var(--red) !important;
+}
+.text-red {
+    color: var(--red) !important;
+}
+.text-brown {
+    color: var(--bg-brown) !important;
+}
+h1 {
+    font-weight: 700;
+}
+/*** Spinner ***/
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--red);
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* cursor type */
+span.typed-words {
+    color: var(--red);
+}
+
+span.typed-cursor {
+    color: var(--red);
+}
+
+span.typed-cursor--blink {
+    color: var(--red);
+}
+
+.typed-cursor{
+    opacity: 1;
+    font-weight: 200;
+}
+
+.typed-cursor.typed-cursor--blink {
+    font-weight: 200;
+}
+.typed-cursor.typed-cursor--blink{
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+    }
+
+@keyframes typedjsBlink{
+    50% { opacity: 0.0; }
+}
+
+@-webkit-keyframes typedjsBlink{
+    0% { opacity: 1; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1; }
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background: var(--red);
+    border-radius: 2px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 5px;
+    bottom: 0px;
+    background: #fefff0;
+    -webkit-animation: section-title-run 5s infinite linear;
+    animation: section-title-run 5s infinite linear;
+}
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -75px;
+}
+
+.section-title.text-center::after {
+    -webkit-animation: section-title-run-center 5s infinite linear;
+    animation: section-title-run-center 5s infinite linear;
+}
+
+@-webkit-keyframes section-title-run {
+    0% {left: 0; } 50% { left : 145px; } 100% { left: 0; }
+}
+
+@-webkit-keyframes section-title-run-center {
+    0% { left: 50%; margin-left: -75px; } 50% { left : 50%; margin-left: 45px; } 100% { left: 50%; margin-left: -75px; }
+}
+
+@-webkit-keyframes section-title-run-sm {
+    0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
+}

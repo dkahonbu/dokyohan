@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faAlignLeft, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-
+  faAlignLeft = faAlignLeft;
+  faBars = faBars;
 }
