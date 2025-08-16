@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "do-kyohan",
-    "public": "dist",
+    "public": "dist/dokyohan/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
