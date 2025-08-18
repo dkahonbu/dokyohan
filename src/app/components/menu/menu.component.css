@@ -22,7 +22,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     /* -webkit-filter: drop-shadow(2px 3px 2px #8d8979); */
     -webkit-filter: drop-shadow(2px 3px 4px #444040);
     border-radius: 50%;
-    top: 1px;
+    top: 5px;
 }
 
 .logo::before {
