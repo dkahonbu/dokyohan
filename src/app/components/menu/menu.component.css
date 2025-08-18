@@ -15,10 +15,14 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     z-index: 999;
     background: var(--white-yellow);
     /* padding: 10px 55px 10px 0px; */
-    padding: 10px 35px 10px 35px;
-    transform: skew(-30deg);
+    /* padding: 10px 35px 10px 35px; */
+    padding: 16px 18px;
+    /* transform: skew(-30deg); */
     /* -webkit-filter: drop-shadow(2px 2px 1px #8d8979); */
-    -webkit-filter: drop-shadow(2px 3px 2px #8d8979);
+    /* -webkit-filter: drop-shadow(2px 3px 2px #8d8979); */
+    -webkit-filter: drop-shadow(2px 3px 4px #444040);
+    border-radius: 50%;
+    top: 1px;
 }
 
 .logo::before {
@@ -39,9 +43,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     border: none;
     display: block;
     max-width: 100%;
-    transform: skew(30deg);
-    -ms-transform: skew(30deg);
-    -webkit-transform: skew(30deg);
+    /* transform: skew(30deg); */
+    /* -ms-transform: skew(30deg);
+    -webkit-transform: skew(30deg); */
     filter: drop-shadow(1px 1px 1px #000);
     -webkit-filter: drop-shadow(1px 1px 1px #000);
 }
@@ -51,7 +55,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     font-weight: 600;
     padding: 25px 25px;
     cursor: pointer;
-    -webkit-filter: drop-shadow(2px 2px 1px #730720);
+    -webkit-filter: drop-shadow(2px 2px 1px #7307209e);
 }
 
 @media (min-width: 992px) {
@@ -67,7 +71,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
         width: 57%;
         /* left: 15%; */
-        margin-left: 160px;
+        margin-left: 85px;
      }
      .navbar-expand-lg .navbar-nav {
         flex-direction: row;
@@ -84,6 +88,11 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         left: 20%;
      } */
 }
+@media (max-width: 1099.98px) {
+    .navbar-expand-lg .navbar-collapse {
+        width:70%;
+     }
+}
 @media (max-width: 991.98px) {
     .navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
         -webkit-filter: drop-shadow(2px 0px 1px #6d021b);
@@ -94,7 +103,15 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     .logo {
         -webkit-filter: drop-shadow(2px 0px 1px #8d8979);
         margin-left: -47px;
+        /* transform: skew(-30deg); */
+        border-radius: 0;
+        top: unset;
+        padding: 10px 35px;
     }
+    /* .logo img {
+        -ms-transform: skew(30deg);
+        -webkit-transform: skew(30deg);
+    } */
     
     .logo::before {
         left: -999999px;
