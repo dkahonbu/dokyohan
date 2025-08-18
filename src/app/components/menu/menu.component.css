@@ -14,9 +14,11 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     position: relative;
     z-index: 999;
     background: var(--white-yellow);
-    padding: 10px 55px 10px 0px;
+    /* padding: 10px 55px 10px 0px; */
+    padding: 10px 35px 10px 35px;
     transform: skew(-30deg);
-    -webkit-filter: drop-shadow(2px 2px 1px #8d8979);
+    /* -webkit-filter: drop-shadow(2px 2px 1px #8d8979); */
+    -webkit-filter: drop-shadow(2px 3px 2px #8d8979);
 }
 
 .logo::before {
@@ -25,9 +27,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     display: block;
     height: 100%;
     position: absolute;
-    left: -999999px;
+    /* left: -999999px; */
     top: 0;
-    width: 999999px;
+    /* width: 999999px; */
 }
 
 .logo img {
@@ -52,7 +54,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
 }
 
 @media (min-width: 992px) {
-     .navbar-expand-lg .navbar-collapse {
+    .navbar-expand-lg .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
         z-index: 9;
@@ -63,7 +65,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         -webkit-transform: skew(-30deg);
         -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
         width: 57%;
-        left: 15%;
+        /* left: 15%; */
+        margin-left: 160px;
      }
      .navbar-expand-lg .navbar-nav {
         flex-direction: row;
@@ -76,9 +79,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     margin: 0 auto;
 }
 @media (max-width: 1199.98px) {
-    .navbar-expand-lg .navbar-collapse {
+    /* .navbar-expand-lg .navbar-collapse {
         left: 20%;
-     }
+     } */
 }
 @media (max-width: 991.98px) {
     .navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
@@ -89,6 +92,12 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     }
     .logo {
         -webkit-filter: drop-shadow(2px 0px 1px #8d8979);
+        margin-left: -47px;
+    }
+    
+    .logo::before {
+        left: -999999px;
+        width: 999999px;
     }
     nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         background-color:  var(--red);
