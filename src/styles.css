@@ -164,3 +164,11 @@ span.typed-cursor--blink {
 @-webkit-keyframes section-title-run-sm {
     0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
 }
+
+h2.mb-0.fw-bold {
+    -webkit-filter: drop-shadow(2px 2px 1px #00000018);
+}
+
+h1.display-6.text-white.mb-5 {
+    -webkit-filter: drop-shadow(2px 2px 1px #00000048);
+} 
