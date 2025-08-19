@@ -72,6 +72,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         width: 57%;
         /* left: 15%; */
         margin-left: 85px;
+        top: 30px;
      }
      .navbar-expand-lg .navbar-nav {
         flex-direction: row;
