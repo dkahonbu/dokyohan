@@ -16,7 +16,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     background: var(--white-yellow);
     /* padding: 10px 55px 10px 0px; */
     /* padding: 10px 35px 10px 35px; */
-    padding: 16px 18px;
+    /* padding: 16px 18px; */
+    padding: 11px 13px;
     /* transform: skew(-30deg); */
     /* -webkit-filter: drop-shadow(2px 2px 1px #8d8979); */
     /* -webkit-filter: drop-shadow(2px 3px 2px #8d8979); */
@@ -53,7 +54,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     color: #fff;
     display: block;
     font-weight: 600;
-    padding: 25px 25px;
+    padding: 15px;
     cursor: pointer;
     -webkit-filter: drop-shadow(2px 2px 1px #7307209e);
 }
@@ -72,7 +73,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
         width: 57%;
         /* left: 15%; */
         margin-left: 85px;
-        top: 30px;
+        top: 35px;
      }
      .navbar-expand-lg .navbar-nav {
         flex-direction: row;
