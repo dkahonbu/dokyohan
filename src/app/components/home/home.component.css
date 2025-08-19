@@ -9,7 +9,7 @@
 }
 
 .banner-col .section-title h1 {
-    color: #000;
+    color: var(--charcoal);
     font-size: 4rem;
     text-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 47%);
 }

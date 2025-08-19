@@ -5,6 +5,7 @@
     --white-yellow: #fffcef;
     --red: #b00a31;
     --brown: #616455;
+    --charcoal: #333333;
 }
 /* You can add global styles to this file, and also import other style files */
 .red-drop-shadow {
@@ -31,6 +32,9 @@
 }
 .text-brown {
     color: var(--brown) !important;
+}
+.text-charcoal {
+    color: var(--charcoal) !important;
 }
 h1 {
     font-weight: 700;
@@ -172,3 +176,22 @@ h2.mb-0.fw-bold {
 h1.display-6.text-white.mb-5 {
     -webkit-filter: drop-shadow(2px 2px 1px #00000048);
 } 
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #100303;
+    /* border-radius: 10px; */
+    background: #eae3d8 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(176 10 49 / 70%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b00a31;
+}
