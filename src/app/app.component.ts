@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute,private meta: Meta) {
     this.meta.addTag({ 
       name: 'description', 
-      content: `My site's description that will show in googleWe teach core karate elements—kihon (basics), kata (forms), and kumite (sparring) while instilling character and respect aligned with traditional values like the dojo kun.`
+      content: `Do-Kyohan Karate Association`
      })
 }
 

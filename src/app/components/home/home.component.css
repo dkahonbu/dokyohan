@@ -250,3 +250,6 @@ div#events .p-4 .events-bottom a.btn.btn-bg-red.slideInLeft {
     font-size: 12px;
     -webkit-filter: drop-shadow(1px 1px 1px #626164);
 }
+.hiddenForm {
+	display: none
+}

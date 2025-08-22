@@ -17,6 +17,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
+    BrowserAnimationsModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FontAwesomeModule
-    
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      preventDuplicates: true
+    })
   ],
   providers: [
     provideFirebaseApp(() => initializeApp({"projectId":"dka-honbu-f71c2","appId":"1:174889089136:web:9c1ce5d6c5b5a0cca8dcb5","storageBucket":"dka-honbu-f71c2.firebasestorage.app","apiKey":"AIzaSyCf2Yrm15hAWa-DAwygZlPLlExqaJlzUX0","authDomain":"dka-honbu-f71c2.firebaseapp.com","messagingSenderId":"174889089136","measurementId":"G-3087C5V4VY"})),

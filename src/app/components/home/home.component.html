@@ -200,34 +200,83 @@
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                     <div class="bg-white rounded p-5 form-shadow">
-                        <form>
+                        <form [formGroup]="sendmailForm" id="gform" (ngSubmit)="sendEmail()">
                             <div class="row g-3">
                                 <div class="col-sm-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="gname" placeholder="Gurdian Name">
-                                        <label for="gname">Your Name</label>
+                                        <!-- <input type="text" class="form-control" id="gname" placeholder="Gurdian Name"> -->
+                                        <input
+                                                formControlName="name"
+                                                id="name"
+                                                name="name"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Your Name"
+                                                [ngClass]="{'is-invalid':f['name'].touched && f['name'].invalid, 
+                                                            'is-valid': f['name'].untouched && f['name'].valid}">
+                                                <div *ngIf="f['name'].touched && f['name'].invalid" class="invalid-feedback">
+                                                    Please provide a name.
+                                                </div>
+                                        <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="gmail" placeholder="Gurdian Email">
-                                        <label for="gmail">Your Email</label>
+                                        <!-- <input type="email" class="form-control" id="email" placeholder="Gurdian Email"> -->
+                                          <input
+                                                formControlName="email"
+                                                id="email"
+                                                name="email"
+                                                type="email"
+                                                class="form-control"
+                                                placeholder="Your Email"
+                                                [ngClass]="{'is-invalid':f['email'].touched && f['email'].invalid, 
+                                                            'is-valid': f['email'].untouched && f['email'].valid}">
+                                                <div *ngIf="f['email'].touched && f['email'].invalid" class="invalid-feedback">
+                                                    Please provide a email.
+                                                </div>
+                                        <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="cname" placeholder="Child Name">
-                                        <label for="cname">Your Mobile</label>
+                                        <!-- <input type="text" class="form-control" id="cname" placeholder="Child Name"> -->
+                                          <input
+                                                formControlName="mobile"
+                                                id="mobile"
+                                                name="mobile"
+                                                type="number"
+                                                class="form-control"
+                                                [ngClass]="{'is-invalid':f['mobile'].touched && f['mobile'].invalid, 
+                                                            'is-valid': f['mobile'].untouched && f['mobile'].valid}">
+                                                <div *ngIf="f['mobile'].touched && f['mobile'].invalid" class="invalid-feedback">
+                                                    Please provide a contact number.
+                                                </div>
+                                        <label for="mobile">Your Mobile</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
+                                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea> -->
+                                        <textarea
+                                                formControlName="message" 
+                                                class="form-control" 
+                                                id="message" 
+                                                name="message" 
+                                                placeholder="Message" 
+                                                rows="6"
+                                                [ngClass]="{'is-invalid':f['message'].touched && f['message'].invalid, 
+                                                            'is-valid': f['message'].untouched && f['message'].valid}">
+                                            </textarea>
+                                            <div *ngIf="f['message'].touched && f['message'].invalid" class="invalid-feedback">
+                                                Please provide a message.
+                                            </div>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
+                                <input [formControl]="honeypot" class="hiddenForm" type="text" />
                                 <div class="col-12">
-                                    <button class="btn btn-danger py-3 px-5 shadow-icon" type="submit"><fa-icon [icon]="faEnvelope"></fa-icon> Send Email</button>
+                                    <button class="btn btn-danger py-3 px-5 shadow-icon" role="button" type="submit" [disabled]="!sendmailForm.valid"><fa-icon [icon]="faEnvelope"></fa-icon> Send Email</button>
                                 </div>
                             </div>
                         </form>
