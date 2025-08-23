@@ -4,6 +4,7 @@
     --light-blue: #f4f7fe;
     --white-yellow: #fffcef;
     --red: #b00a31;
+    --red2: #ba435b;
     --brown: #616455;
     --charcoal: #333333;
 }
@@ -24,11 +25,17 @@
     background-color: var(--white-yellow) !important;
     border-color: var(--white-yellow) !important;
 }
+.txt-opacity80 {
+    opacity: 0.8;
+}
 .bg-red {
     background-color: var(--red) !important;
 }
 .text-red {
     color: var(--red) !important;
+}
+.text-red2 {
+    color: var(--red2) !important;
 }
 .text-brown {
     color: var(--brown) !important;

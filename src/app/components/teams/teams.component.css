@@ -1,0 +1,98 @@
+.page-header {
+    background: url(/assets/img/bg2.jpg) center center no-repeat;
+    background-size: cover;
+}
+/*** Team ***/
+.team-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    background-color: var(--white-yellow) !important;
+    -webkit-filter: drop-shadow(2px 2px 2px #9198a3);
+}
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+.team-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -50px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    bottom: 0;
+    opacity: 1;
+}
+
+.team-item a.btn {
+    color: var(--primary);
+}
+
+.team-item a.btn:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.container.team-header {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    position: relative;
+    top: 45px;
+    .col-lg-7 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+     h1.slideInDown.mb-4 {
+        color: var(--red);
+        text-shadow: 0 0.125rem 0.25rem rgb(97 88 88 / 47%);
+        font-weight: 700;
+        -webkit-filter: drop-shadow(2px 2px 1px #61585878);
+        font-size: 4rem;
+    }
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row.g-4.mb-4.center-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+ol.breadcrumb.justify-content-center.justify-content-lg-start.mb-0 li.breadcrumb-item:not(.active), ol.breadcrumb.justify-content-center.justify-content-lg-start.mb-0 li.breadcrumb-item a {
+    color: var(--charcoal) !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+    .container.team-header {
+        .col-lg-7 {
+            text-align: center;
+            margin: 45px auto;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .row.g-4.mb-4.center-div {
+        flex-direction: column;
+    }
+}

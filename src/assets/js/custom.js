@@ -58,3 +58,9 @@
         $('.slides img[data-id="' + myIndex + '"]').addClass('active');
         setTimeout(carousel, 5000);
     }
+    function setPlaySpeed() { 
+        var x = document.getElementById("dka-logo-animate");
+        // var x = $('#dka-logo-animate');
+        x.defaultPlaybackRate = 0.5;
+        x.load();
+    } 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -18,7 +18,7 @@ declare var type: any;
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
   faAlignLeft = faAlignLeft;
   faFacebookF = faFacebookF;
   faTwitter = faTwitter;
@@ -52,18 +52,18 @@ export class HomeComponent implements OnInit {
         honeypot: this.honeypot
       }); 
     }
-  ngOnInit(): void {
-    new WOW().init();
-    new type();
-    new spinner();
-  }
-  public onClick(elementId: string): void { this.viewportScroller.scrollToAnchor(elementId); }
-
-  // ngAfterViewInit(): void {
+  // ngOnInit(): void {
   //   new WOW().init();
   //   new type();
   //   new spinner();
   // }
+  public onClick(elementId: string): void { this.viewportScroller.scrollToAnchor(elementId); }
+
+  ngAfterViewInit(): void {
+    new WOW().init();
+    new type();
+    new spinner();
+  }
   get f(){
     return this.sendmailForm.controls;
   }
@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
             if (this.getResponse.result) {
               this.toastr.success("Thanks for the message " + this.sendmailForm.value.name + " I'll get back to you soon!", "SUCCESS", {timeOut: 1500})
               this.sendmailForm.reset();
-                this.reloadCurrentRoute();
+                // this.reloadCurrentRoute();
               // .onHidden.subscribe(() => {
               //   this.sendmailForm.reset();
               //   this.reloadCurrentRoute();

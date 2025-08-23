@@ -7,7 +7,15 @@
             <fa-icon [icon]="faBars"></fa-icon>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav nav me-auto mb-2 mb-lg-0">
+            <div *ngIf="!currenPage" class="navbar-nav nav me-auto mb-2 mb-lg-0">
+                <a href="/" class="nav-item nav-link pe-3">Home</a>
+                <a href="/home#about" class="nav-item pe-3 nav-link">About us</a>
+                <a href="/home#services" class="nav-item pe-3 nav-link">Services</a>
+                <a href="/home#teams" class="nav-item pe-3 nav-link">Teams</a>
+                <a href="/home#events" class="nav-item pe-3 nav-link">Events</a>
+                <a href="/home#contact" class="nav-item pe-3 nav-link">Contact</a>
+            </div>
+            <div *ngIf="currenPage" class="navbar-nav nav me-auto mb-2 mb-lg-0">
                 <a href="/" class="nav-item nav-link pe-3">Home</a>
                 <a (click)="onClick('about')" class="nav-item pe-3 nav-link">About us</a>
                 <a (click)="onClick('services')" class="nav-item pe-3 nav-link">Services</a>
