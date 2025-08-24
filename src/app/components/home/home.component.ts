@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { faFacebookF, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faAlignLeft, faUsersViewfinder, faEnvelope, faCalendar, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faUsersViewfinder, faEnvelope, faCalendar, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 // import '../../../assets/js/smtp.js';
 import { ToastrService } from 'ngx-toastr';
 
@@ -28,6 +28,7 @@ export class HomeComponent implements AfterViewInit {
   faEnvelope = faEnvelope;
   faMapMarkerAlt = faMapMarkerAlt;
   faCalendar = faCalendar;
+  faClock = faClock;
   
   getResponse: any;
   sendmailForm!: FormGroup;

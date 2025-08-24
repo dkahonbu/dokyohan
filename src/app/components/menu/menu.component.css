@@ -17,7 +17,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
     /* padding: 10px 55px 10px 0px; */
     /* padding: 10px 35px 10px 35px; */
     /* padding: 16px 18px; */
-    padding: 11px 13px;
+    /* padding: 11px 13px; */
+    padding: 16px 18px;
     /* transform: skew(-30deg); */
     /* -webkit-filter: drop-shadow(2px 2px 1px #8d8979); */
     /* -webkit-filter: drop-shadow(2px 3px 2px #8d8979); */
@@ -38,8 +39,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
 }
 
 .logo img {
-    height: 91px;
-    width: 92px;
+    height: 80px;
+    width: 78px;
     margin-top: 0px;
     border: none;
     display: block;

@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BeltingComponent } from './components/events-details/belting/belting.component';
+import { BatangPinoyComponent } from './components/events-details/batang-pinoy/batang-pinoy.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     FooterComponent,
     TeamsComponent,
-    EventsComponent
+    EventsComponent,
+    BeltingComponent,
+    BatangPinoyComponent
   ],
   imports: [
     BrowserModule,
