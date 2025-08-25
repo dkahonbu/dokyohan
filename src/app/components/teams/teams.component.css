@@ -1,5 +1,6 @@
 .page-header {
-    background: url(/assets/img/bg2.jpg) center center no-repeat;
+    /* background: url(/assets/img/bg2.jpg) center center no-repeat; */
+    background: url(/assets/img/bg0.jpg) center center no-repeat;
     background-size: cover;
 }
 /*** Team ***/

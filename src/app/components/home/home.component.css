@@ -114,7 +114,8 @@
 }
 
 header {
-    background-image: url(/assets/img/bg4.jpg);
+    /* background-image: url(/assets/img/bg4.jpg); */
+    background-image: url(/assets/img/bg00.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
