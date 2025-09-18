@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute,private meta: Meta) {
     this.meta.addTag({ 
       name: 'description', 
-      content: `Do-Kyohan Karate Association`
+      content: `Do-Kyohan Karate Association - DKA Honbu`
      })
 }
 
