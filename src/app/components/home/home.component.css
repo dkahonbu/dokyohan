@@ -311,8 +311,13 @@ small.smll-txt {
     position: absolute;
     bottom: 25px;
     left: 25px;
-    color: var(--bs-white);
+    color: var(--charcoal);
     z-index: 5;
+    background-color: var(--white-yellow);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .blog .blog-item .blog-content {
