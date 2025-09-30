@@ -54,10 +54,11 @@ nav.navbar.navbar-expand-lg.navbar-dark.px-5 {
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     display: block;
-    font-weight: 600;
+    font-weight: 400;
     padding: 15px;
     cursor: pointer;
-    -webkit-filter: drop-shadow(2px 2px 1px #7307209e);
+    /* -webkit-filter: drop-shadow(2px 2px 1px #7307209e); */
+    -webkit-filter: drop-shadow(1px 1px 2px #333);
 }
 
 @media (min-width: 992px) {

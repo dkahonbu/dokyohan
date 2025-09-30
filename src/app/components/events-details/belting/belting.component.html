@@ -1,35 +1,7 @@
-<!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container belting-ceremony">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="position-relative">
-                    <h1 class="animated slideInDown mb-4">Belting Ceremony
-                    </h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
-                            <!-- <li class="breadcrumb-item text-white">Pages</li> -->
-                            <li class="breadcrumb-item text-red2 active fw-medium txt-opacity80" aria-current="page">Belting Ceremony</li>
-                        </ol>
-                    </nav>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <video id="dka-logo-animate" loop autoplay muted>
-                    <source src="assets/logo-3.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                    </video>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
+<app-header></app-header>
 
      <!-- Belting Ceremony Start -->
-    <div class="container-xxl">
+    <div class="container-xxl gallery">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-red">Dka Honbu</h5>
@@ -41,57 +13,33 @@
                 </p>
             </div>
             
-<div class="row g-4">
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row g-4">
+                    <div class="col {{currentPage}} wow fadeInUp" data-wow-delay="0.2s" *ngFor="let beltings of belting | paginate
+                                : {
+                                    id: 'templatePagination',
+                                    itemsPerPage: beltingTableSize,
+                                    currentPage: currentPage,
+                                    totalItems: beltingCount
+                                };
+                                let m = index">
                         <div class="gallery-item">
-                            <img src="img/gallery-1.jpg" class="img-fluid rounded w-100 h-100" alt="">
+                            
+                            <img src="{{beltings.image}}" class="img-fluid rounded w-100 h-100" alt="{{beltings.alt}}">
                             <div class="search-icon">
-                                <a href="img/gallery-1.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-1"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-2.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-2.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-2"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-3.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-3.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-3"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-4.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-4.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-4"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-5.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-5.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-5"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-6.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-6.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-6"><i class="fas fa-search-plus"></i></a>
+                                <a href="{{beltings.image}}" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-4"><fa-icon [icon]="faSearchPlus"></fa-icon></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            
-        </div>
+            <div class="d-flex justify-content-center pagi-numbers mt-4">
+                        <pagination-controls
+                        id="templatePagination"
+                        previousLabel="Prev"
+                        nextLabel="Next"
+                        (pageChange)="onTableDataChangeBelt($event)"
+                        >
+                    </pagination-controls>
+            </div>
+        </div> 
     </div>
     <!-- Belting Ceremony End -->

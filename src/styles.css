@@ -3,6 +3,7 @@
     --gray: #ecf0f6;
     --light-blue: #f4f7fe;
     --white-yellow: #fffcef;
+    --white-yellow2: #ddd8c4; 
     --red: #b00a31;
     --red2: #ba435b;
     --brown: #616455;
@@ -201,4 +202,7 @@ h1.display-6.text-white.mb-3 {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #b00a31;
+}
+ul.ngx-pagination li.current {
+    background-color: var(--red) !important;
 }

@@ -19,10 +19,12 @@ import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BeltingComponent } from './components/events-details/belting/belting.component';
 import { BatangPinoyComponent } from './components/events-details/batang-pinoy/batang-pinoy.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { BatangPinoyComponent } from './components/events-details/batang-pinoy/b
     TeamsComponent,
     EventsComponent,
     BeltingComponent,
-    BatangPinoyComponent
+    BatangPinoyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { BatangPinoyComponent } from './components/events-details/batang-pinoy/b
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    NgxPaginationModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
       preventDuplicates: true

@@ -115,7 +115,8 @@
 
 header {
     /* background-image: url(/assets/img/bg4.jpg); */
-    background-image: url(/assets/img/bg00.jpg);
+    /* background-image: url(/assets/img/bg00.jpg); */
+    background:linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/assets/img/bg00.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
