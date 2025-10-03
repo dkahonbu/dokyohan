@@ -3,50 +3,74 @@
     --gray: #ecf0f6;
     --light-blue: #f4f7fe;
     --white-yellow: #fffcef;
-    --white-yellow2: #ddd8c4; 
+    --white-yellow2: #ddd8c4;
     --red: #b00a31;
     --red2: #ba435b;
     --brown: #616455;
     --charcoal: #333333;
 }
+
+.red {
+    border: 1px solid red;
+}
+.green {
+    border: 1px solid green;
+}
+.blue {
+    border: 1px solid blue;
+}
+.black {
+    border: 1px solid black;
+}
 /* You can add global styles to this file, and also import other style files */
 .red-drop-shadow {
     -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
 }
+
 .shadow-icon {
     -webkit-filter: drop-shadow(1px 1px 1px #bdb8b8);
 }
+
 .btn-bg-red {
     color: #ffffff;
     background-color: var(--red) !important;
     border-color: var(--red) !important;
 }
+
 .btn-white-yellow {
     color: #000;
     background-color: var(--white-yellow) !important;
     border-color: var(--white-yellow) !important;
 }
+
 .txt-opacity80 {
     opacity: 0.8;
 }
+
 .bg-red {
     background-color: var(--red) !important;
 }
+
 .text-red {
     color: var(--red) !important;
 }
+
 .text-red2 {
     color: var(--red2) !important;
 }
+
 .text-brown {
     color: var(--brown) !important;
 }
+
 .text-charcoal {
     color: var(--charcoal) !important;
 }
+
 h1 {
     font-weight: 700;
 }
+
 /*** Spinner ***/
 .spinner {
     width: 40px;
@@ -61,9 +85,11 @@ h1 {
     0% {
         -webkit-transform: perspective(120px)
     }
+
     50% {
         -webkit-transform: perspective(120px) rotateY(180deg)
     }
+
     100% {
         -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
     }
@@ -74,10 +100,12 @@ h1 {
         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
         -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
     }
+
     50% {
         transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
         -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
     }
+
     100% {
         transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
         -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
@@ -110,7 +138,7 @@ span.typed-cursor--blink {
     color: var(--red);
 }
 
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     font-weight: 200;
 }
@@ -118,20 +146,31 @@ span.typed-cursor--blink {
 .typed-cursor.typed-cursor--blink {
     font-weight: 200;
 }
-.typed-cursor.typed-cursor--blink{
+
+.typed-cursor.typed-cursor--blink {
     animation: typedjsBlink 0.7s infinite;
     -webkit-animation: typedjsBlink 0.7s infinite;
     animation: typedjsBlink 0.7s infinite;
-    }
-
-@keyframes typedjsBlink{
-    50% { opacity: 0.0; }
 }
 
-@-webkit-keyframes typedjsBlink{
-    0% { opacity: 1; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1; }
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes typedjsBlink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .section-title::before {
@@ -155,6 +194,7 @@ span.typed-cursor--blink {
     -webkit-animation: section-title-run 5s infinite linear;
     animation: section-title-run 5s infinite linear;
 }
+
 .section-title.text-center::before {
     left: 50%;
     margin-left: -75px;
@@ -166,15 +206,48 @@ span.typed-cursor--blink {
 }
 
 @-webkit-keyframes section-title-run {
-    0% {left: 0; } 50% { left : 145px; } 100% { left: 0; }
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 145px;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 @-webkit-keyframes section-title-run-center {
-    0% { left: 50%; margin-left: -75px; } 50% { left : 50%; margin-left: 45px; } 100% { left: 50%; margin-left: -75px; }
+    0% {
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    50% {
+        left: 50%;
+        margin-left: 45px;
+    }
+
+    100% {
+        left: 50%;
+        margin-left: -75px;
+    }
 }
 
 @-webkit-keyframes section-title-run-sm {
-    0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 85px;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 h2.mb-0.fw-bold {
@@ -183,7 +256,7 @@ h2.mb-0.fw-bold {
 
 h1.display-6.text-white.mb-3 {
     -webkit-filter: drop-shadow(2px 2px 1px #00000048);
-} 
+}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -203,6 +276,7 @@ h1.display-6.text-white.mb-3 {
 ::-webkit-scrollbar-thumb:hover {
     background: #b00a31;
 }
+
 ul.ngx-pagination li.current {
     background-color: var(--red) !important;
 }

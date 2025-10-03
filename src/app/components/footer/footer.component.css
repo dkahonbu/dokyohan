@@ -26,6 +26,7 @@
 .d-flex.align-items-center.justify-content-center.copyrights p {
     font-size: 13px;
 }
+
 .d-flex.align-items-center.justify-content-center.copyrights p a.text-white {
     text-decoration: none;
 }
@@ -51,8 +52,19 @@
     -webkit-animation: section-title-run-sm 5s infinite linear;
     animation: section-title-run-sm 5s infinite linear;
 }
+
 @-webkit-keyframes section-title-run-sm {
-    0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 85px;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 .social-m a.btn.btn-white-yellow.text-red.btn-square {
@@ -63,18 +75,21 @@
 .social-m a.btn.btn-white-yellow.text-red.btn-square:hover fa-icon.ng-fa-icon {
     color: #616455 !important;
 }
+
 .link-animated a.text-light:hover {
     color: #f9f3d8 !important;
 }
 
-.link-animated i.bi.me-2,.footer-section-column i.bi.me-2 {
+.link-animated i.bi.me-2,
+.footer-section-column i.bi.me-2 {
     color: #f5f0d7 !important;
 }
 
 .link-animated a.text-light {
     text-decoration: none;
-    font-weight:500;
+    font-weight: 500;
 }
+
 .footer-section-column p {
     font-weight: 500;
 }
@@ -90,7 +105,8 @@ button.scrollTop {
     padding: .4rem .7rem;
 }
 
-.link-animated.link-cursor a.text-light, .video-thumbnail {
+.link-animated.link-cursor a.text-light,
+.video-thumbnail {
     cursor: pointer;
     -webkit-filter: drop-shadow(2px 2px 1px #730720);
 }
@@ -111,6 +127,7 @@ div#staticBackdrop .modal-dialog.modal-dialog-centered {
         width: unset;
         /* -webkit-filter: drop-shadow(2px 2px 2px #535151); */
     }
+
     .modal-header {
         background-color: #7b0924;
         border-bottom: 0;
@@ -118,11 +135,13 @@ div#staticBackdrop .modal-dialog.modal-dialog-centered {
         font-size: 10px;
         padding: 14px;
         -webkit-filter: drop-shadow(2px 2px 2px #535151);
+
         .modal-title {
             text-shadow: 0 0.125rem 0.25rem #60595b3d;
             color: #ffffff;
             font-size: 1.2rem;
         }
+
         button.btn-close {
             border-radius: 50%;
             background-color: #ffffff;
@@ -130,12 +149,17 @@ div#staticBackdrop .modal-dialog.modal-dialog-centered {
             margin-right: 0;
         }
     }
+
     .modal-body {
         padding: 0;
         height: 440px;
         width: 293px;
         -webkit-filter: drop-shadow(2px 2px 2px #535151);
     }
+}
+
+p.mb-0.fs-7 {
+    font-size: 14px;
 }
 
 /* div#staticBackdrop .modal-dialog.modal-dialog-centered .modal-content {

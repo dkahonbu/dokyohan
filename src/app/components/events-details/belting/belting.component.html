@@ -1,20 +1,22 @@
 <app-header></app-header>
 
-     <!-- Belting Ceremony Start -->
-    <div class="container-xxl gallery">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-red">Dka Honbu</h5>
-                <h2 class="mb-0 fw-bold text-charcoal">Belting Ceremony 2025</h2> 
-            </div>
-            <div class="mb-5 text-center mx-auto" style="max-width: 600px;">
-                <p class="mb-0">
-                    Welcome to this special occasion as we come together to celebrate the achievements of our students in their Karatedo journey. Let us continue to walk the path of Karatedo with humility, respect, and unwavering spirit.
-                </p>
-            </div>
-            
-                <div class="row g-4">
-                    <div class="col {{currentPage}} wow fadeInUp" data-wow-delay="0.2s" *ngFor="let beltings of belting | paginate
+<!-- Belting Ceremony Start -->
+<div class="container-xxl gallery">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-red">Dka Honbu</h5>
+            <h2 class="mb-0 fw-bold text-charcoal">Belting Ceremony 2025</h2>
+        </div>
+        <div class="mb-5 text-center mx-auto" style="max-width: 600px;">
+            <p class="mb-0">
+                Welcome to this special occasion as we come together to celebrate the achievements of our students in
+                their Karatedo journey. Let us continue to walk the path of Karatedo with humility, respect, and
+                unwavering spirit.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col {{currentPage}} wow fadeInUp" data-wow-delay="0.2s" *ngFor="let beltings of belting | paginate
                                 : {
                                     id: 'templatePagination',
                                     itemsPerPage: beltingTableSize,
@@ -22,24 +24,21 @@
                                     totalItems: beltingCount
                                 };
                                 let m = index">
-                        <div class="gallery-item">
-                            
-                            <img src="{{beltings.image}}" class="img-fluid rounded w-100 h-100" alt="{{beltings.alt}}">
-                            <div class="search-icon">
-                                <a href="{{beltings.image}}" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-4"><fa-icon [icon]="faSearchPlus"></fa-icon></a>
-                            </div>
-                        </div>
+                <div class="gallery-item">
+
+                    <img src="{{beltings.image}}" class="img-fluid rounded w-100 h-100" alt="{{beltings.alt}}">
+                    <div class="search-icon">
+                        <a href="{{beltings.image}}" class="btn btn-light btn-lg-square rounded-circle"
+                            data-lightbox="Gallery-4"><fa-icon [icon]="faSearchPlus"></fa-icon></a>
                     </div>
                 </div>
-            <div class="d-flex justify-content-center pagi-numbers mt-4">
-                        <pagination-controls
-                        id="templatePagination"
-                        previousLabel="Prev"
-                        nextLabel="Next"
-                        (pageChange)="onTableDataChangeBelt($event)"
-                        >
-                    </pagination-controls>
             </div>
-        </div> 
+        </div>
+        <div class="d-flex justify-content-center pagi-numbers mt-4">
+            <pagination-controls id="templatePagination" previousLabel="Prev" nextLabel="Next"
+                (pageChange)="onTableDataChangeBelt($event)">
+            </pagination-controls>
+        </div>
     </div>
-    <!-- Belting Ceremony End -->
+</div>
+<!-- Belting Ceremony End -->

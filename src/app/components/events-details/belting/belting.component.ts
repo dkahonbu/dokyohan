@@ -3,7 +3,7 @@ import { Belting } from '../../../models/belting.model';
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
 
 declare var WOW: any;
-declare var spinner: any; 
+declare var spinner: any;
 
 @Component({
   selector: 'app-belting',

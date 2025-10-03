@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var WOW: any;
-declare var spinner: any; 
+declare var spinner: any;
 
 @Component({
   selector: 'app-batang-pinoy',

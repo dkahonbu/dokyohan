@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { DatePipe } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -58,7 +59,8 @@ import { HeaderComponent } from './components/header/header.component';
   providers: [
     provideFirebaseApp(() => initializeApp({"projectId":"dka-honbu-f71c2","appId":"1:174889089136:web:9c1ce5d6c5b5a0cca8dcb5","storageBucket":"dka-honbu-f71c2.firebasestorage.app","apiKey":"AIzaSyCf2Yrm15hAWa-DAwygZlPLlExqaJlzUX0","authDomain":"dka-honbu-f71c2.firebaseapp.com","messagingSenderId":"174889089136","measurementId":"G-3087C5V4VY"})),
     provideFirestore(() => getFirestore()),
-    provideDatabase(() => getDatabase())
+    provideDatabase(() => getDatabase()),
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
