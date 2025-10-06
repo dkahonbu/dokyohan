@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -8,6 +8,8 @@ import { faAlignLeft, faUsersViewfinder, faEnvelope, faCalendar, faMapMarkerAlt,
 // import '../../../assets/js/smtp.js';
 import { ToastrService } from 'ngx-toastr';
 import { DatePipe } from '@angular/common';
+import { GeocoderAutocomplete } from '@geoapify/geocoder-autocomplete';
+
 
 declare var WOW: any;
 declare var spinner: any;
@@ -19,7 +21,11 @@ declare var type: any;
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements  OnInit, OnDestroy {
+  
+ private autocomplete: GeocoderAutocomplete | undefined;
+  public selectedAddress: any;
+
   faAlignLeft = faAlignLeft;
   faFacebookF = faFacebookF;
   faTwitter = faTwitter;
@@ -45,6 +51,7 @@ export class HomeComponent implements AfterViewInit {
   birthdateYr: any;
   birthdateMonth?: number;
   lessYr: any;
+  displayVal = ''; 
   
   sendmailForm!: FormGroup;
   registerMailForm!: FormGroup;
@@ -56,7 +63,11 @@ export class HomeComponent implements AfterViewInit {
   honeypot: FormControl = new FormControl("");
 
   birthdate: FormControl = new FormControl("", [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]);
-  age: FormControl = new FormControl('', [Validators.required]);
+  age: FormControl = new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]);
+  rname: FormControl = new FormControl("", [Validators.required]);
+  remail: FormControl = new FormControl("", [Validators.required, Validators.email]);
+  rmobile: FormControl = new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]);
+  honeypotreg: FormControl = new FormControl("");
   
   constructor(
     private viewportScroller: ViewportScroller,
@@ -76,7 +87,11 @@ export class HomeComponent implements AfterViewInit {
     
     this.registerMailForm = this.formBuilder.group({
       birthdate: this.birthdate,
-      age: this.age
+      age: this.age,
+      rname: this.rname,
+      remail: this.remail,
+      rmobile: this.rmobile,
+      honeypotreg: this.honeypotreg
     });
 
   }
@@ -87,15 +102,34 @@ export class HomeComponent implements AfterViewInit {
   // }
   public onClick(elementId: string): void { this.viewportScroller.scrollToAnchor(elementId); }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     new WOW().init();
     new type();
     new spinner();
     this.getdate();
+     const apiKey = 'a39b9a7df54e49fcb5d5508f2fd14482';
+    const container = document.getElementById('autocomplete-container');
+
+    if (container) {
+      this.autocomplete = new GeocoderAutocomplete(container, apiKey, {});
+
+      // Register the 'select' event listener
+      this.autocomplete.on('select', (location) => {
+        // The `location` parameter is the GeoJSON Feature object of the selected address
+        this.selectedAddress = location;
+        // console.log('Selected location:', this.selectedAddress.properties.formatted);
+        this.displayVal = this.selectedAddress.properties.formatted;
+        console.log('Selected location:', this.displayVal);
+      });
+    }
   }
   get f() {
     return this.sendmailForm.controls;
   }
+  get h() {
+    return this.registerMailForm.controls;
+  }
+  registerMail(): void {}
   sendEmail(): void {
     if (this.sendmailForm.status == "VALID" && this.honeypot.value == "") {
       this.sendmailForm.disable(); // disable the form if it's valid to disable multiple submissions
@@ -131,6 +165,7 @@ export class HomeComponent implements AfterViewInit {
     }
   }
 
+
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
     this.router.navigateByUrl('/home#contact', { skipLocationChange: true }).then(() => {
@@ -149,7 +184,7 @@ export class HomeComponent implements AfterViewInit {
       this.currentMonthVal = this.currentMonth;
 
       this.datePipeVal = this.datePipe.transform(dateObject, 'mediumDate');
-
+      console.log(this.datePipeVal);
       if (this.currentMonthVal >= this.birthdateMonth) {
         this.ageVal = this.currentYear - this.birthdateYr;
         console.log('Age >= ', this.ageVal);
@@ -159,6 +194,13 @@ export class HomeComponent implements AfterViewInit {
         console.log('Age:', this.ageVal);
       }
     });
+  }
+
+ngOnDestroy(): void {
+    // It's good practice to clean up event listeners to prevent memory leaks
+    if (this.autocomplete) {
+      this.autocomplete.off('select');
+    }
   }
 
 }

@@ -148,24 +148,25 @@ div#joinNowModal .modal-dialog .modal-content {
         -webkit-filter: drop-shadow(3px 3px 4px #333);
 
         .container {
-            height: 400px;
+            min-height: 400px;
             display: flex;
             padding: 20px;
 
             .row {
 
                 .col-md-6:nth-child(1) {
-                    background: url(/assets/img/login-bg.png) 50% 80% no-repeat;
+                    background: url(/assets/img/dka-honbu-registration.png) 50% 60% no-repeat;
                     background-size: contain;
                     width: 55%;
+                    margin: 0 10px;
+                    -webkit-filter: drop-shadow(3px 3px 4px #333);
 
                     img.img-fluid {
                         height: 70px;
-                        -webkit-filter: drop-shadow(3px 3px 4px #333);
                     }
 
                     h1 {
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         display: inline-flex;
                         color: var(--white-yellow);
                         text-shadow: 0 .125rem .25rem rgb(0 0 0 / 70%);
@@ -178,6 +179,8 @@ div#joinNowModal .modal-dialog .modal-content {
                     padding: 18px;
                     border-radius: 10px;
                     width: 40%;
+
+                    
                 }
             }
         }

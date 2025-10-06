@@ -13,15 +13,19 @@
 .red {
     border: 1px solid red;
 }
+
 .green {
     border: 1px solid green;
 }
+
 .blue {
     border: 1px solid blue;
 }
+
 .black {
     border: 1px solid black;
 }
+
 /* You can add global styles to this file, and also import other style files */
 .red-drop-shadow {
     -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
@@ -69,6 +73,94 @@
 
 h1 {
     font-weight: 700;
+}
+/* geoapify */
+ .geoapify-autocomplete-input {
+    padding: 0 31px 0 7px;
+    width: 100%;
+    /* width: calc(100% - 40px); */
+    /* line-height: 36px;
+    height: 36px; */
+    outline: none;
+    height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+    min-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+    line-height: 1.25;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    font-size: 14px;
+}
+
+.geoapify-autocomplete-items {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: none;
+    background-color: #fff;
+    
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.geoapify-autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.geoapify-autocomplete-items div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.geoapify-autocomplete-items .active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.geoapify-autocomplete-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.geoapify-autocomplete-item .icon {
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    color: #aaa;
+}
+
+.geoapify-autocomplete-item .icon.emoji {
+    color: unset;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.geoapify-close-button {
+    position: absolute;
+    right: 5px;
+    top: 0;
+
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+.geoapify-close-button.visible {
+    display: flex;
+}
+
+.geoapify-close-button {
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.geoapify-close-button:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.geoapify-autocomplete-items .secondary-part {
+    margin-left: 10px;
+    font-size: small;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 /*** Spinner ***/

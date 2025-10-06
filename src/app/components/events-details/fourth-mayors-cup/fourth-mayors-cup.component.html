@@ -1,0 +1,79 @@
+<app-header></app-header>
+<div id="autocomplete-container" class="autocomplete-container"></div>
+
+<div *ngIf="selectedAddress" class="selected-result">
+  <h3>Selected Address:</h3>
+  <pre>{{ selectedAddress | json }}</pre>
+</div>
+
+<div class="address-collection-container">
+  <div class="address-row">
+    <div class="address-field-with-label main-part margin-right">
+      <label>Street:</label><br>
+      <div class="address-field autocomplete-container">
+        <geoapify-geocoder-autocomplete
+          [value]="streetValue"
+          [skipIcons]="true"
+          [placeholder]="' '"
+          (placeSelect)="onStreetSelected($event)">
+        </geoapify-geocoder-autocomplete>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="address-row">
+    <div class="address-field-with-label main-part margin-right">
+      <label>City:</label><br>
+      <div class="address-field autocomplete-container">
+        <geoapify-geocoder-autocomplete
+          [value]="cityValue"
+          [type]="'city'"
+          [placeholder]="' '"
+          [skipIcons]="false"
+          (placeSelect)="onCitySelected($event)">
+        </geoapify-geocoder-autocomplete>
+      </div>
+    </div>
+
+    <div class="address-field-with-label">
+      <label for="postcode">ZIP code:</label><br>
+      <input
+        id="postcode"
+        class="geoapify-autocomplete-input small-input"
+        [(ngModel)]="formData.postcode">
+    </div>
+  </div>
+
+  <div class="address-row">
+    <div class="address-field-with-label main-part margin-right">
+      <label>State:</label><br>
+      <div class="address-field autocomplete-container">
+        <geoapify-geocoder-autocomplete
+          [value]="stateValue"
+          [type]="'state'"
+          [placeholder]="' '"
+          [skipIcons]="true"
+          (placeSelect)="onStateSelected($event)">
+        </geoapify-geocoder-autocomplete>
+      </div>
+    </div>
+
+    <div class="address-field-with-label main-part">
+      <label>Country:</label><br>
+      <div class="address-field autocomplete-container">
+        <geoapify-geocoder-autocomplete
+          [value]="countryValue"
+          [type]="'country'"
+          [placeholder]="' '"
+          [skipIcons]="false"
+          (placeSelect)="onCountrySelected($event)">
+        </geoapify-geocoder-autocomplete>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button (click)="checkAddress()">Check address</button>
+  </div>
+</div>

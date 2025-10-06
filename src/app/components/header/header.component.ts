@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit {
       this.currenPage = 'Our Teams';
     } else if (currentUrl == '/batang-pinoy') {
       this.currenPage = 'Batang Pinoy';
+    } else if (currentUrl == '/fourth-mayors-cup') {
+      this.currenPage = '4th Mayors cup';
     } else {
       this.currenPage = currentUrl;
     }

@@ -17,7 +17,7 @@
                             feels safe, supported, and encouraged to grow.
                         </p>
                         <button type="button" class="btn btn-bg-red animated slideInLeft fs-7" data-bs-toggle="modal"
-                            data-bs-target="#joinNowModall" dis>
+                            data-bs-target="#joinNowModall" >
                             <fa-icon [icon]="faUserPlus" class="pe-2"></fa-icon>Join Now
                         </button>
                     </div>
@@ -33,7 +33,7 @@
     </div>
 </header>
 <!-- modal -->
-<!-- <div class="modal fade" id="joinNowModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal fade" id="joinNowModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="joinNowModalTitle" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -42,27 +42,27 @@
                     <div class="row">
                         <div class="col-md-6">
                             <img src="assets/img/logo-dka.png" class="img-fluid" alt="DKA Honbu Logo">
-                            <h1 class="ps-4">Welcome to DKA Honbu</h1>
+                            <h1 class="ps-4">DKA Honbu Registration Form</h1>
                         </div>
 
                         <div class="col-md-6">
-                            <form [formGroup]="registerMailForm" id="gform" (ngSubmit)="sendEmail()">
+                            <form [formGroup]="registerMailForm" id="gform" (ngSubmit)="registerMail()">
                             <div class="row g-3">
                                 <div class="col-sm-12">
                                     <div class="form-floating">
-                                        <input formControlName="name" id="name" name="name" type="text"
-                                            class="form-control" placeholder="Your Name" [ngClass]="{'is-invalid':f['name'].touched && f['name'].invalid, 
-                                                            'is-valid': f['name'].untouched && f['name'].valid}">
-                                        <div *ngIf="f['name'].touched && f['name'].invalid" class="invalid-feedback">
+                                        <input formControlName="rname" id="rname" name="rname" type="text"
+                                            class="form-control" placeholder="Your Name" [ngClass]="{'is-invalid':h['rname'].touched && h['rname'].invalid, 
+                                                            'is-valid': h['rname'].untouched && h['rname'].valid}">
+                                        <div *ngIf="h['rname'].touched && h['rname'].invalid" class="invalid-feedback">
                                             Please provide a name.
                                         </div>
-                                        <label for="name">Your Name</label>
+                                        <label for="rname">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-7">
                                     <div class="form-floating">
                                         <input id="birthdate" class="form-control" [formControl]="birthdate" name="birthdate" type="date" />
-                                        <div *ngIf="f['birthdate'].touched && f['birthdate'].invalid" class="invalid-feedback">
+                                        <div *ngIf="h['birthdate'].touched && h['birthdate'].invalid" class="invalid-feedback">
                                             Please provide a Birthdate.
                                         </div>
                                         <label for="birthdate">Birthdate</label>
@@ -71,9 +71,9 @@
                                 <div class="col-sm-5">
                                     <div class="form-floating">
                                         <input formControlName="age" id="age" name="age" type="number"
-                                            class="form-control" [ngClass]="{'is-invalid':f['age'].touched && f['age'].invalid, 
-                                                            'is-valid': f['age'].untouched && f['age'].valid}" value="{{this.ageVal}}" aria-label="readonly input example" readonly>
-                                        <div *ngIf="f['age'].touched && f['age'].invalid"
+                                            class="form-control" [ngClass]="{'is-invalid':h['age'].touched && h['age'].invalid, 
+                                                            'is-valid': h['age'].untouched && h['age'].valid}" value='{{this.ageVal}}' aria-label="readonly input example" readonly>
+                                        <div *ngIf="h['age'].touched && h['age'].invalid"
                                             class="invalid-feedback">
                                             Please provide a Age.
                                         </div>
@@ -82,32 +82,38 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-floating">
-                                        <input formControlName="email" id="email" name="email" type="email"
-                                            class="form-control" placeholder="Your Email" [ngClass]="{'is-invalid':f['email'].touched && f['email'].invalid, 
-                                                            'is-valid': f['email'].untouched && f['email'].valid}">
-                                        <div *ngIf="f['email'].touched && f['email'].invalid" class="invalid-feedback">
+                                        <input formControlName="remail" id="remail" name="remail" type="email"
+                                            class="form-control" placeholder="Your Email" [ngClass]="{'is-invalid':h['remail'].touched && h['remail'].invalid, 
+                                                            'is-valid': h['remail'].untouched && h['remail'].valid}">
+                                        <div *ngIf="h['remail'].touched && h['remail'].invalid" class="invalid-feedback">
                                             Please provide a email.
                                         </div>
-                                        <label for="email">Your Email</label>
+                                        <label for="remail">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-floating">
-                                        <input formControlName="mobile" id="mobile" name="mobile" type="number"
-                                            class="form-control" [ngClass]="{'is-invalid':f['mobile'].touched && f['mobile'].invalid, 
-                                                            'is-valid': f['mobile'].untouched && f['mobile'].valid}">
-                                        <div *ngIf="f['mobile'].touched && f['mobile'].invalid"
+                                        <input formControlName="rmobile" id="rmobile" name="rmobile" type="number"
+                                            class="form-control" [ngClass]="{'is-invalid':h['rmobile'].touched && h['rmobile'].invalid, 
+                                                            'is-valid': h['rmobile'].untouched && h['rmobile'].valid}">
+                                        <div *ngIf="h['rmobile'].touched && h['rmobile'].invalid"
                                             class="invalid-feedback">
                                             Please provide a contact number.
                                         </div>
-                                        <label for="mobile">Your Mobile</label>
+                                        <label for="rmobile">Your Mobile</label>
                                     </div>
                                 </div>
-                                <input [formControl]="honeypot" class="hiddenForm" type="text" />
+                                <div class="col-sm-12">
+                                    <div class="form-floating">
+                                        
+                               <div id="autocomplete-container" class="autocomplete-container"></div>
+                                    </div>
+                                </div>
+                                <input [formControl]="honeypotreg" class="hiddenForm" type="text" />
                                 <div class="col-12 d-flex justify-content-end">
                                     <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
                                     <button class="btn btn-danger shadow-icon" role="button" type="submit"
-                                        [disabled]="!sendmailForm.valid"><fa-icon [icon]="faEnvelope"></fa-icon> Register</button>
+                                        [disabled]="!registerMailForm.valid"><fa-icon [icon]="faEnvelope"></fa-icon> Register</button>
                                 </div>
                             </div>
                         </form>
@@ -117,7 +123,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- about -->
 <div id="about" style="scroll-margin-top:3rem">
     <div class="container-fluid py-5">
@@ -474,7 +480,7 @@
                                 respect, and the pursuit of excellence. Competitors from different dojos and styles have
                                 gathered here not just to win, but to grow, learn, and honor the true spirit of Karate.
                             </p>
-                            <a href="#" class="btn btn-danger rounded-pill py-2 px-4 disabled">Coming Soon <i
+                            <a href="/fourth-mayors-cup" class="btn btn-danger rounded-pill py-2 px-4 disabled">Read More <i
                                     class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>

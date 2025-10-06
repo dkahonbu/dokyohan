@@ -9,7 +9,6 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TeamsComponent } from './components/teams/teams.component';
-import { EventsComponent } from './components/events/events.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
@@ -26,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BeltingComponent } from './components/events-details/belting/belting.component';
 import { BatangPinoyComponent } from './components/events-details/batang-pinoy/batang-pinoy.component';
 import { HeaderComponent } from './components/header/header.component';
+import { GeoapifyGeocoderAutocompleteModule } from '@geoapify/angular-geocoder-autocomplete';
+import { fourthMayorsCupComponent } from './components/events-details/fourth-mayors-cup/fourth-mayors-cup.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,10 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     FooterComponent,
     TeamsComponent,
-    EventsComponent,
     BeltingComponent,
     BatangPinoyComponent,
-    HeaderComponent
+    HeaderComponent,
+    fourthMayorsCupComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +53,7 @@ import { HeaderComponent } from './components/header/header.component';
     FormsModule,
     NgxPaginationModule,
     ReactiveFormsModule,
+    GeoapifyGeocoderAutocompleteModule.withConfig('a39b9a7df54e49fcb5d5508f2fd14482'),
     ToastrModule.forRoot({
       preventDuplicates: true
     })
