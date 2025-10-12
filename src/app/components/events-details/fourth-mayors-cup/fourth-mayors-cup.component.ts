@@ -12,6 +12,9 @@ export class fourthMayorsCupComponent implements OnInit, OnDestroy {
   
  private autocomplete: GeocoderAutocomplete | undefined;
   public selectedAddress: any;
+
+  message = '';
+  showWarnings = false;
   formData = {
     street: '',
     city: '',
@@ -28,7 +31,12 @@ export class fourthMayorsCupComponent implements OnInit, OnDestroy {
   countryValue = ''; 
   displayVal = ''; 
 
-
+spinners = {
+    street: false,
+    city: false,
+    state: false,
+    country: false
+  };
   private readonly myAPIKey = 'a39b9a7df54e49fcb5d5508f2fd14482'; // Replace with your actual API key
 
 
@@ -52,7 +60,14 @@ export class fourthMayorsCupComponent implements OnInit, OnDestroy {
       });
     }
   }
-  
+  showSpinner(field: string) {
+    this.spinners[field as keyof typeof this.spinners] = true;
+  }
+
+  hideSpinner(field: string) {
+    this.spinners[field as keyof typeof this.spinners] = false;
+  }
+
   onStreetSelected(street: any) {
     if (street) {
       this.formData.street = street.properties.street || '';
@@ -120,6 +135,15 @@ export class fourthMayorsCupComponent implements OnInit, OnDestroy {
   }
 
   checkAddress() {
+    this.message = '';
+    this.showWarnings = false;
+
+    if (!this.formData.postcode || !this.cityValue || !this.streetValue || !this.stateValue || !this.countryValue) {
+      this.highlightEmpty();
+      this.message = "Please fill in the required fields and check your address again.";
+      return;
+    }
+    
     console.log(this.streetValue);
     console.log(this.cityValue);
     console.log(this.formData.postcode);
@@ -133,5 +157,14 @@ ngOnDestroy(): void {
     if (this.autocomplete) {
       this.autocomplete.off('select');
     }
+  }
+
+  highlightEmpty() {
+    this.showWarnings = true;
+
+    // Remove warnings after 3 seconds
+    setTimeout(() => {
+      this.showWarnings = false;
+    }, 3000);
   }
 }

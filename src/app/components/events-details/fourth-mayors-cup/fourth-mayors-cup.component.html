@@ -1,10 +1,14 @@
 <app-header></app-header>
-<div id="autocomplete-container" class="autocomplete-container"></div>
+<div class="autocomplete-container">
+  <geoapify-geocoder-autocomplete></geoapify-geocoder-autocomplete>
+</div>
 
 <div *ngIf="selectedAddress" class="selected-result">
   <h3>Selected Address:</h3>
   <pre>{{ selectedAddress | json }}</pre>
 </div>
+
+
 
 <div class="address-collection-container">
   <div class="address-row">
@@ -15,10 +19,15 @@
           [value]="streetValue"
           [skipIcons]="true"
           [placeholder]="' '"
-          (placeSelect)="onStreetSelected($event)">
+          (placeSelect)="onStreetSelected($event)"
+          (requestStart)="showSpinner('street')"
+          (requestEnd)="hideSpinner('street')">
         </geoapify-geocoder-autocomplete>
+        <div class="loading-spinner" [style.display]="spinners.street ? 'block' : 'none'"></div>
       </div>
     </div>
+
+
   </div>
 
 
@@ -31,8 +40,11 @@
           [type]="'city'"
           [placeholder]="' '"
           [skipIcons]="false"
-          (placeSelect)="onCitySelected($event)">
+          (placeSelect)="onCitySelected($event)"
+          (requestStart)="showSpinner('city')"
+          (requestEnd)="hideSpinner('city')">
         </geoapify-geocoder-autocomplete>
+        <div class="loading-spinner" [style.display]="spinners.city ? 'block' : 'none'"></div>
       </div>
     </div>
 
@@ -41,7 +53,8 @@
       <input
         id="postcode"
         class="geoapify-autocomplete-input small-input"
-        [(ngModel)]="formData.postcode">
+        [(ngModel)]="formData.postcode"
+        [class.warning-input]="showWarnings && !formData.postcode"/>
     </div>
   </div>
 
@@ -54,8 +67,11 @@
           [type]="'state'"
           [placeholder]="' '"
           [skipIcons]="true"
-          (placeSelect)="onStateSelected($event)">
+          (placeSelect)="onStateSelected($event)"
+          (requestStart)="showSpinner('state')"
+          (requestEnd)="hideSpinner('state')">
         </geoapify-geocoder-autocomplete>
+        <div class="loading-spinner" [style.display]="spinners.state ? 'block' : 'none'"></div>
       </div>
     </div>
 
@@ -67,12 +83,16 @@
           [type]="'country'"
           [placeholder]="' '"
           [skipIcons]="false"
-          (placeSelect)="onCountrySelected($event)">
+          (placeSelect)="onCountrySelected($event)"
+          (requestStart)="showSpinner('country')"
+          (requestEnd)="hideSpinner('country')">
         </geoapify-geocoder-autocomplete>
+        <div class="loading-spinner" [style.display]="spinners.country ? 'block' : 'none'"></div>
       </div>
     </div>
   </div>
 
+  <div class="message-container">{{ message }}</div>
   <div class="button-container">
     <button (click)="checkAddress()">Check address</button>
   </div>
