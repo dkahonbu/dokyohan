@@ -170,6 +170,21 @@ div#joinNowModal .modal-dialog .modal-content {
                         display: inline-flex;
                         color: var(--white-yellow);
                         text-shadow: 0 .125rem .25rem rgb(0 0 0 / 70%);
+                        @media (max-width: 479px) {
+                            margin-top: 16px;
+                            text-align: center;
+                        }
+                    }
+                    @media (max-width: 992px) { 
+                        width: 96%;
+                        height: 450px;
+                    }
+                    @media (max-width: 479px) { 
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: flex-start;
+                            background-position-y: 70%
                     }
                 }
 
@@ -181,6 +196,9 @@ div#joinNowModal .modal-dialog .modal-content {
                     width: 40%;
 
                     
+                    @media (max-width: 992px) { 
+                        width: 100%;
+                    }
                 }
             }
         }

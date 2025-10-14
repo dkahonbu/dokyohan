@@ -230,7 +230,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   reloadCurrentRoute() {
     let currentUrl = this.router.url;
-    this.router.navigateByUrl('/home#contact', { skipLocationChange: true }).then(() => {
+    this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
       this.router.navigate([currentUrl]);
     });
   }

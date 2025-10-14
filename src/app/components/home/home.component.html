@@ -85,6 +85,11 @@
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-floating">
+                                                <div id="autocomplete-container" class="autocomplete-container"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
                                             <input formControlName="remail" id="remail" name="remail" type="email"
                                                 class="form-control" placeholder="Your Email" [ngClass]="{'is-invalid':h['remail'].touched && h['remail'].invalid, 
                                                             'is-valid': h['remail'].untouched && h['remail'].valid}">
@@ -105,12 +110,6 @@
                                                 Please provide a contact number.
                                             </div>
                                             <label for="rmobile">Your Mobile</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-floating">
-
-                                            <div id="autocomplete-container" class="autocomplete-container"></div>
                                         </div>
                                     </div>
                                     <input [formControl]="honeypotreg" class="hiddenForm" type="text" />
