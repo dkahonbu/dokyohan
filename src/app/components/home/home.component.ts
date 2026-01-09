@@ -14,6 +14,7 @@ import { GeocoderAutocomplete } from '@geoapify/geocoder-autocomplete';
 declare var WOW: any;
 declare var spinner: any;
 declare var type: any;
+declare var eventCarousel: any;
 // declare var Email: any;
 
 @Component({
@@ -106,6 +107,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     new WOW().init();
     new type();
     new spinner();
+    new eventCarousel();
     this.getdate();
     const apiKey = 'a39b9a7df54e49fcb5d5508f2fd14482';
     const container = document.getElementById('autocomplete-container');  

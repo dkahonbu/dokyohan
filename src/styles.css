@@ -54,6 +54,9 @@
 .bg-red {
     background-color: var(--red) !important;
 }
+.bg-white-yellow {
+    background-color: var(--white-yellow) !important;
+}
 
 .text-red {
     color: var(--red) !important;
@@ -371,4 +374,46 @@ h1.display-6.text-white.mb-3 {
 
 ul.ngx-pagination li.current {
     background-color: var(--red) !important;
+}
+
+/*** events-carousel ***/
+.events-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.events-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #DDDDDD;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.events-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--red);
+}
+
+.events-carousel .owl-item.center {
+    position: relative;
+    z-index: 1;
+}
+
+.owl-item .col-lg-4.wow.fadeInUp {
+    width: 95% !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    transition: .5s;
+}
+
+@media (max-width: 1200px) {
+    div#events p {
+        height: 192px;
+    }
 }

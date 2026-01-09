@@ -90,3 +90,27 @@ function vidComponent() {
         $(this).addClass("playing");
     });
 }
+
+function eventCarousel() {
+    $(".events-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        dots: true,
+        loop: true,
+        center: false,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+}
