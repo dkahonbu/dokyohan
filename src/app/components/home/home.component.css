@@ -10,7 +10,7 @@
 
 .banner-col .section-title h1 {
     color: var(--charcoal);
-    font-size: 4rem;
+    font-size: 3.8rem;
     text-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 47%);
 }
 
@@ -25,14 +25,14 @@
     margin-top: 5px;
     font-weight: 400;
     box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 5%);
-    -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
+    filter: drop-shadow(2px 2px 1px #6d021b);
     font-size: 0.875rem;
 }
 
 .banner-content .btn-bg-red:hover {
     background-color: #fffcef !important;
     border-color: #fffcef !important;
-    -webkit-filter: drop-shadow(2px 2px 1px #000);
+    filter: drop-shadow(2px 2px 1px #000);
 }
 
 .hero-img {
@@ -103,12 +103,12 @@
 
 .d-flex.flex-column.justify-content-center.text-center.bg-primary.rounded.h-100.p-3 {
     filter: drop-shadow(1px 1px 1px var(--brown));
-    -webkit-filter: drop-shadow(1px 1px 1px var(--brown));
+    filter: drop-shadow(1px 1px 1px var(--brown));
     background-color: var(--red) !important;
 }
 
 .slide-box {
-    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
 }
 
 .banner-col .section-title::before {
@@ -136,7 +136,7 @@ header {
 }
 
 .banner-content.wow.fadeInUp .row .col-lg-5 img {
-    -webkit-filter: drop-shadow(1px 1px 1px #a0a7b1);
+    filter: drop-shadow(1px 1px 1px #a0a7b1);
 }
 
 div#joinNowModal .modal-dialog .modal-content {
@@ -145,7 +145,7 @@ div#joinNowModal .modal-dialog .modal-content {
         background-color: var(--red2);
         border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
         border-radius: var(--bs-modal-border-radius);
-        -webkit-filter: drop-shadow(3px 3px 4px #333);
+        filter: drop-shadow(3px 3px 4px #333);
 
         .container {
             min-height: 400px;
@@ -159,7 +159,7 @@ div#joinNowModal .modal-dialog .modal-content {
                     background-size: contain;
                     width: 55%;
                     margin: 0 10px;
-                    -webkit-filter: drop-shadow(3px 3px 4px #333);
+                    filter: drop-shadow(3px 3px 4px #333);
 
                     img.img-fluid {
                         height: 70px;
@@ -170,6 +170,21 @@ div#joinNowModal .modal-dialog .modal-content {
                         display: inline-flex;
                         color: var(--white-yellow);
                         text-shadow: 0 .125rem .25rem rgb(0 0 0 / 70%);
+                        @media (max-width: 479px) {
+                            margin-top: 16px;
+                            text-align: center;
+                        }
+                    }
+                    @media (max-width: 992px) { 
+                        width: 96%;
+                        height: 450px;
+                    }
+                    @media (max-width: 479px) { 
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: flex-start;
+                            background-position-y: 70%
                     }
                 }
 
@@ -181,6 +196,9 @@ div#joinNowModal .modal-dialog .modal-content {
                     width: 40%;
 
                     
+                    @media (max-width: 992px) { 
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -198,7 +216,7 @@ div#joinNowModal .modal-dialog .modal-content {
     padding: 0 20px;
     transition: .5s;
     background-color: var(--red) !important;
-    -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
+    filter: drop-shadow(2px 2px 1px #6d021b);
 }
 
 .service-item .service-icon {
@@ -219,13 +237,13 @@ div#joinNowModal .modal-dialog .modal-content {
 
 .service-item p {
     color: var(--bg-drk-brown-color);
-    -webkit-transform: skew(6deg);
+    transform: skew(6deg);
 }
 
 .service-item h4 {
     font-size: 1.2rem;
     font-weight: 700;
-    -webkit-transform: skew(6deg);
+    transform: skew(6deg);
 }
 
 .service-item p {
@@ -234,17 +252,17 @@ div#joinNowModal .modal-dialog .modal-content {
 }
 
 .slide-box {
-    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
 }
 
 @media (max-width: 590.98px) {
     .slide-box {
-        -webkit-transform: skew(0deg);
+        transform: skew(0deg);
     }
 
     .service-item p,
     .service-item h4 {
-        -webkit-transform: skew(0deg);
+        transform: skew(0deg);
     }
 }
 
@@ -259,7 +277,7 @@ div#joinNowModal .modal-dialog .modal-content {
 /* teams */
 .team-item.bg-white.text-center.rounded.p-4.pt-0 {
     background-color: var(--white-yellow) !important;
-    -webkit-filter: drop-shadow(2px 2px 2px #9198a3);
+    filter: drop-shadow(2px 2px 2px #9198a3);
 }
 
 .team-item.bg-white.text-center.rounded.p-4.pt-0:hover {
@@ -267,7 +285,7 @@ div#joinNowModal .modal-dialog .modal-content {
 }
 
 div#teams a.btn.btn-square.btn-bg-red.m-1 {
-    -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
+    filter: drop-shadow(2px 2px 1px #6d021b);
 }
 
 div#teams a.btn.btn-square.btn-bg-red.m-1:hover {
@@ -277,7 +295,7 @@ div#teams a.btn.btn-square.btn-bg-red.m-1:hover {
 div#teams .btn-bg-red.slideInLeft:hover {
     background-color: #fffcef !important;
     border-color: #fffcef !important;
-    -webkit-filter: drop-shadow(2px 2px 1px #000);
+    filter: drop-shadow(2px 2px 1px #000);
 }
 
 /* contact */
@@ -287,11 +305,11 @@ div#teams .btn-bg-red.slideInLeft:hover {
 }
 
 .container-fluid.contact.py-5 .btn-bg-red {
-    -webkit-filter: drop-shadow(2px 2px 1px #6d021b);
+    filter: drop-shadow(2px 2px 1px #6d021b);
 }
 
 .container-fluid.contact.py-5 .btn-bg-red img {
-    -webkit-filter: drop-shadow(1px 1px 1px #000);
+    filter: drop-shadow(1px 1px 1px #000);
 }
 
 .form-shadow {
@@ -310,7 +328,7 @@ span.contact-nmbr h5.mb-0 {
 /* events */
 .event-item.bg-light.rounded.overflow-hidden {
     background-color: var(--white-yellow) !important;
-    -webkit-filter: drop-shadow(2px 2px 2px #9198a3);
+    filter: drop-shadow(2px 2px 2px #9198a3);
 }
 
 div#events p {
@@ -333,7 +351,7 @@ div#events .p-4 {
 
 div#events .p-4 .events-bottom a.btn.btn-bg-red.slideInLeft {
     font-size: 12px;
-    -webkit-filter: drop-shadow(1px 1px 1px #626164);
+    filter: drop-shadow(1px 1px 1px #626164);
 }
 
 .hiddenForm {
@@ -349,7 +367,7 @@ small.smll-txt {
 .blog .blog-item {
     border-radius: 10px;
     background-color: var(--white-yellow) !important;
-    -webkit-filter: drop-shadow(2px 2px 2px #9198a3);
+    filter: drop-shadow(2px 2px 2px #9198a3);
 }
 
 .blog .blog-item .blog-img {

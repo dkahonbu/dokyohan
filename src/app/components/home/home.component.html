@@ -40,7 +40,7 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 px-0">
                             <img src="assets/img/logo-dka.png" class="img-fluid" alt="DKA Honbu Logo">
                             <h1 class="ps-4">DKA Honbu Registration Form</h1>
                         </div>
@@ -85,6 +85,11 @@
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-floating">
+                                            <div id="autocomplete-container" class="autocomplete-container"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
                                             <input formControlName="remail" id="remail" name="remail" type="email"
                                                 class="form-control" placeholder="Your Email" [ngClass]="{'is-invalid':h['remail'].touched && h['remail'].invalid, 
                                                             'is-valid': h['remail'].untouched && h['remail'].valid}">
@@ -107,19 +112,13 @@
                                             <label for="rmobile">Your Mobile</label>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-floating">
-
-                                            <div id="autocomplete-container" class="autocomplete-container"></div>
-                                        </div>
-                                    </div>
                                     <input [formControl]="honeypotreg" class="hiddenForm" type="text" />
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary me-2"
                                             data-bs-dismiss="modal">Close</button>
                                         <button class="btn btn-danger shadow-icon" role="button" type="submit"
                                             [disabled]="!registerMailForm.valid"><fa-icon [icon]="faEnvelope"></fa-icon>
-                                            Register</button>
+                                            Submit</button>
                                     </div>
                                 </div>
                             </form>
@@ -426,6 +425,28 @@
             </div>
 
             <div class="row g-4">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <a href="#">
+                                <img src="assets/img/dka-honbu-2025-tournament.png" class="img-fluid w-100 rounded-top"
+                                    alt="Image">
+                            </a>
+                            <div class="blog-category py-2 px-4">Tournament</div>
+                            <div class="blog-date"><fa-icon class="me-2" [icon]="faClock"></fa-icon>October 4 - 5, 2025
+                            </div>
+                        </div>
+                        <div class="blog-content p-4">
+                            <a href="#" class="h4 d-inline-block mb-4">4th Hon. Mayor Teresa Alegado Cup</a>
+                            <p class="mb-4 fw-normal text-charcoal">We celebrate the spirit of martial arts—discipline,
+                                respect, and the pursuit of excellence. Competitors from different dojos and styles have
+                                gathered here not just to win, but to grow, learn, and honor the true spirit of Karate.
+                            </p>
+                            <a href="/fourth-mayors-cup" class="btn btn-danger rounded-pill py-2 px-4">Read
+                                More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="blog-item">
                         <div class="blog-img">
@@ -466,28 +487,6 @@
                             </p>
                             <a href="/batang-pinoy" class="btn btn-danger rounded-pill py-2 px-4">Read More <i
                                     class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <a href="#">
-                                <img src="assets/img/dka-honbu-2025-tournament.png" class="img-fluid w-100 rounded-top"
-                                    alt="Image">
-                            </a>
-                            <div class="blog-category py-2 px-4">Tournament</div>
-                            <div class="blog-date"><fa-icon class="me-2" [icon]="faClock"></fa-icon>October 4 - 5, 2025
-                            </div>
-                        </div>
-                        <div class="blog-content p-4">
-                            <a href="#" class="h4 d-inline-block mb-4">4th Hon. Mayor Teresa Alegado Cup</a>
-                            <p class="mb-4 fw-normal text-charcoal">We celebrate the spirit of martial arts—discipline,
-                                respect, and the pursuit of excellence. Competitors from different dojos and styles have
-                                gathered here not just to win, but to grow, learn, and honor the true spirit of Karate.
-                            </p>
-                            <a href="/fourth-mayors-cup" class="btn btn-danger rounded-pill py-2 px-4 disabled">Read
-                                More <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>

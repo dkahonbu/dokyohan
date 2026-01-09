@@ -1,66 +1,92 @@
 // spinner();
-    function spinner() {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    }
+function spinner() {
+    setTimeout(function () {
+        if ($('#spinner').length > 0) {
+            $('#spinner').removeClass('show');
+        }
+    }, 1);
+}
 
-    // $(window).on("load resize", function() {
-    //     if (this.matchMedia("(min-width: 992px)").matches) {
-    //         $dropdown.hover(
-    //         function() {
-    //             const $this = $(this);
-    //             $this.addClass(showClass);
-    //             $this.find($dropdownToggle).attr("aria-expanded", "true");
-    //             $this.find($dropdownMenu).addClass(showClass);
-    //         },
-    //         function() {
-    //             const $this = $(this);
-    //             $this.removeClass(showClass);
-    //             $this.find($dropdownToggle).attr("aria-expanded", "false");
-    //             $this.find($dropdownMenu).removeClass(showClass);
-    //         }
-    //         );
-    //     } else {
-    //         $dropdown.off("mouseenter mouseleave");
-    //     }
-    // });
+// $(window).on("load resize", function() {
+//     if (this.matchMedia("(min-width: 992px)").matches) {
+//         $dropdown.hover(
+//         function() {
+//             const $this = $(this);
+//             $this.addClass(showClass);
+//             $this.find($dropdownToggle).attr("aria-expanded", "true");
+//             $this.find($dropdownMenu).addClass(showClass);
+//         },
+//         function() {
+//             const $this = $(this);
+//             $this.removeClass(showClass);
+//             $this.find($dropdownToggle).attr("aria-expanded", "false");
+//             $this.find($dropdownMenu).removeClass(showClass);
+//         }
+//         );
+//     } else {
+//         $dropdown.off("mouseenter mouseleave");
+//     }
+// });
 
-    function type() {
-         var typed = new Typed('.typed-words', {
+function type() {
+    var typed = new Typed('.typed-words', {
         "strings": ["Association", "Association", "Association"],
         "typeSpeed": 90,
         "loop": true,
         "backSpeed": 90,
         "backDelay": 800
     });
-    }
-   
-    var myIndex = 0;
-    // carousel();
+}
 
-    function carousel() {
-        var i;
-        var slides = $('.slides')
+var myIndex = 0;
+// carousel();
+
+function carousel() {
+    var i;
+    var slides = $('.slides')
         , images = slides.find('img');
 
-        images.each(function(i) {
-            $(this).attr('data-id', i + 1);
-        })
-        myIndex++;
-        if (myIndex > images.length) {
-            myIndex = 1
-        }
-
-        $('.slides img').removeClass('active');
-        $('.slides img[data-id="' + myIndex + '"]').addClass('active');
-        setTimeout(carousel, 5000);
+    images.each(function (i) {
+        $(this).attr('data-id', i + 1);
+    })
+    myIndex++;
+    if (myIndex > images.length) {
+        myIndex = 1
     }
-    function setPlaySpeed() { 
-        var x = document.getElementById("dka-logo-animate");
-        // var x = $('#dka-logo-animate');
-        x.defaultPlaybackRate = 0.5;
-        x.load();
-    } 
+
+    $('.slides img').removeClass('active');
+    $('.slides img[data-id="' + myIndex + '"]').addClass('active');
+    setTimeout(carousel, 5000);
+}
+function setPlaySpeed() {
+    var x = document.getElementById("dka-logo-animate");
+    // var x = $('#dka-logo-animate');
+    x.defaultPlaybackRate = 0.5;
+    x.load();
+}
+
+function vidComponent() {
+    var vid = $('#myvid');
+
+    //default video source
+    $(vid).attr("src", $("a.link:first").attr("href"));
+
+    // addClass playing to first video link
+    $("a.link:first").addClass("playing");
+
+
+    $("a.link").on("click", function (event) {
+
+        // prevent link default
+        event.preventDefault();
+
+        // change video source
+        $(vid).attr("src", $(this).attr("href"));
+
+        // remouve class playing from unplayed video href
+        $(".vids a").removeClass("playing");
+
+        // add class playing to video href
+        $(this).addClass("playing");
+    });
+}
